@@ -16,14 +16,11 @@ public class MainApp {
             mostrarRey();
             System.out.println("---------------------");
         }while (opcion!=4);
-
-
     }
 
     private static Rey rey;
 
     private static void ejecutarOpcion (int opcion) {
-
         switch (opcion) {
             case 1:
                 crearReyDef();
@@ -39,17 +36,13 @@ public class MainApp {
                 break;
         }
     }
-
     private static void crearReyDef() {
         rey = new Rey();
     }
-
     private static void crearReyColor () {
         rey = new Rey(Consola.elegirColor());
     }
-
     private static void mover() {
-
         Direccion direccion = null;
         Consola.mostrarDirecciones();
         System.out.println("¿Hacia qué dirección quieres ir?");
@@ -65,5 +58,4 @@ public class MainApp {
     private static void mostrarRey ()  {
         System.out.println(rey.toString());
     }
-
 }

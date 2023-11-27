@@ -15,7 +15,6 @@ public class Consola {
         System.out.println("3. Mover");
         System.out.println("4. Salir");
     }
-
     public static int elegirOpcionMenu() {
         int opcion;
 
@@ -23,10 +22,8 @@ public class Consola {
             System.out.println("Elige una opción:");
             opcion= Entrada.entero();
         } while (opcion<1 || opcion>4);
-
         return opcion;
     }
-
     public static Color elegirColor () {
         char colorRey;
         Color opcion=null;
@@ -43,7 +40,6 @@ public class Consola {
         }
         return opcion;
     }
-
     public static void mostrarDirecciones() {
         System.out.println("Menú de direcciones:");
         System.out.println("1. NORTE");
@@ -57,7 +53,6 @@ public class Consola {
         System.out.println("9. ENROQUE_CORTO");
         System.out.println("10. ENROQUE_LARGO");
     }
-
     public static Direccion elegirDireccion() {
         Direccion direccion = null;
         int opcion;
@@ -101,7 +96,6 @@ public class Consola {
         }
         return direccion;
     }
-
     public static void despedida() {
         System.out.println("¡Hasta luego!");
     }

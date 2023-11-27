@@ -12,7 +12,6 @@ public class Rey {
         this.posicion = new Posicion(1, 'e');
         this.totalMovimientos = 0;
     }
-
     public Rey(Color color) {
         this.color = color;
         if (color == Color.BLANCO) {
@@ -22,11 +21,9 @@ public class Rey {
         }
         this.totalMovimientos = 0;
     }
-
     public Color getColor() {
         return color;
     }
-
     public void setColor(Color color) {
         if (color == null) {
             throw new NullPointerException("El color no es correcto");
@@ -38,25 +35,21 @@ public class Rey {
     public Posicion getPosicion() {
         return posicion;
     }
-
     public void setPosicion(Posicion posicion) {
         if (posicion == null) {
             throw new NullPointerException("La posicion no es valida");
         }
         this.posicion = posicion;
     }
-
     public int getTotalMovimientos() {
         return totalMovimientos;
     }
-
     public void setTotalMovimientos(int totalMovimientos) {
         if (totalMovimientos < 0) {
             throw new IllegalArgumentException("El número de movimientos no puede ser negativo.");
         }
         this.totalMovimientos = totalMovimientos;
     }
-
     public void mover(Direccion direccion) throws OperationNotSupportedException {
         int nFila = posicion.getFila();
         char nColumna = posicion.getColumna();
@@ -112,7 +105,6 @@ public class Rey {
             totalMovimientos++;
         }
     }
-
     private void comprobarEnroque () throws OperationNotSupportedException {
         Rey vBlanco = new Rey();
         vBlanco.setPosicion(new Posicion(1,'e'));
@@ -127,7 +119,6 @@ public class Rey {
             throw new OperationNotSupportedException("ERROR: No esta en la casilla inicial o ya se ha movido el rey anteriormente.");
         }
     }
-
     public String toString() {
         return "El Rey de color: " + color +
                 ". " + posicion +
